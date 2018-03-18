@@ -1,0 +1,53 @@
+<template>
+    <v-content>
+      <v-container >
+        <v-layout v-for="(c,i) in myColors" :key="i" justify-center>
+          <div :class="[c+'--text','box']">{{c}}</div>
+          <div :class="[c+'--text','text--lighten-4','box']">{{c}} 4</div>
+          <div :class="[c+'--text','text--darken-4','box']">{{c}} 4</div>
+          <div :class="[c,'box']">{{c}}</div>
+          <div v-for="(n,i) in 5" :key="i" :class="[c, 'lighten-'+n,'box']">lighten-{{n}}</div>
+          <div v-for="(n,i) in 4" :key="'k'+i" :class="[c, 'darken-'+n,'box']">darken-{{n}}</div>
+          <div v-for="(n,i) in 4" :key="'j'+i" :class="[c, 'accent-'+n,'box']">accent-{{n}}</div>
+        </v-layout>
+      </v-container>
+    </v-content>
+</template>
+
+<script>
+export default {
+  name: 'colors',
+  data: () => ({
+    myColors: [
+      'red',
+      'pink',
+      'purple',
+      'deep-purple',
+      'purple',
+      'indigo',
+      'blue',
+      'light-blue',
+      'cyan',
+      'teal',
+      'green',
+      'light-green',
+      'lime',
+      'yellow',
+      'amber',
+      'orange',
+      'deep-orange',
+      'brown',
+      'blue-grey',
+      'grey',
+    ],
+  }),
+  components: {
+  },
+};
+</script>
+
+<style>
+.box {
+  padding: 6px 4px;
+}
+</style>
