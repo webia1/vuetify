@@ -5,6 +5,7 @@ import router from './router';
 import store from './store';
 
 import 'vuetify/dist/vuetify.min.css';
+import colors from 'vuetify/es5/util/colors';
 import 'babel-polyfill';
 
 Vue.config.productionTip = false;
