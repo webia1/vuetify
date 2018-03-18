@@ -123,3 +123,10 @@ elevation - {0 to 24}
 [Color](https://github.com/vuetifyjs/vuetify/blob/master/src/stylus/settings/_colors.styl)
 
 
+# Scrolling
+
+[Scrolling: see online](https://vuetifyjs.com/en/motion/scrolling)
+
+# Transitions
+
+[Transitions: see online](https://vuetifyjs.com/en/motion/transitions)
