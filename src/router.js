@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Colors from './views/Colors.vue'
+import Content from './views/Content.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/colors',
       name: 'colors',
       component: Colors
+    },
+    {
+      path: '/content',
+      name: 'content',
+      component: Content
     }
   ]
 })
