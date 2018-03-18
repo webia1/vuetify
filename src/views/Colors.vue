@@ -4,6 +4,9 @@
     <v-content>
       <v-container >
         <v-layout v-for="(c,i) in myColors" :key="i" justify-center>
+          <div :class="[c+'--text','box']">{{c}}</div>
+          <div :class="[c+'--text','text--lighten-4','box']">{{c}} 4</div>
+          <div :class="[c+'--text','text--darken-4','box']">{{c}} 4</div>
           <div :class="[c,'box']">{{c}}</div>
           <div v-for="(n,i) in 5" :key="i" :class="[c, 'lighten-'+n,'box']">lighten-{{n}}</div>
           <div v-for="(n,i) in 4" :key="'k'+i" :class="[c, 'darken-'+n,'box']">darken-{{n}}</div>
@@ -20,7 +23,7 @@ export default {
   data: () => ({
     myColors: [
       'red',
-      'pink ',
+      'pink',
       'purple',
       'deep-purple',
       'purple',
@@ -48,9 +51,6 @@ export default {
 
 <style>
 .box {
-  width: 100px;
-  height: 30px;
-  border: 1px solid black;
-  margin: 2px;
+  padding: 6px 4px;
 }
 </style>
