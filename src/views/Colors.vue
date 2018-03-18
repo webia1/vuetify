@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <h1>Colors</h1>
     <v-content>
       <v-container >
         <v-layout v-for="(c,i) in myColors" :key="i" justify-center>
@@ -14,7 +12,6 @@
         </v-layout>
       </v-container>
     </v-content>
-  </div>
 </template>
 
 <script>
