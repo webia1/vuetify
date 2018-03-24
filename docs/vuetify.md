@@ -40,9 +40,9 @@ fluid;
 ## Grids
 
 ```jsx
-v-container
-  v-layout
-    v-flex xs1 (..to xs12)
+v-container                 // center or with fluid full width
+  v-layout                  // separating sections
+    v-flex xs1 (..to xs12)  // v-flex (flex: 1 1 auto)
 ```
 
 ### Material Design Viewport Breakpoints

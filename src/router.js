@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Colors from './views/Colors.vue'
 import Content from './views/Content.vue'
+import Grid from './views/Grid.vue'
 import UI from './views/UIComponents.vue'
 
 Vue.use(Router)
@@ -24,6 +25,11 @@ export default new Router({
       path: '/content',
       name: 'content',
       component: Content
+    },
+    {
+      path: '/grid',
+      name: 'grid',
+      component: Grid
     },
     {
       path: '/ui',

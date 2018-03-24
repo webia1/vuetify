@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app >
     <v-navigation-drawer fixed clipped app v-model="drawer">
       <v-toolbar flat class="transparent">
         <v-list class="pa-0">
@@ -18,8 +18,8 @@
       <v-toolbar-title>Toolbar-Title</v-toolbar-title>
       <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
-    <v-content>
-      <v-container>
+    <v-content >
+      <v-container fluid fill-height>
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -41,25 +41,8 @@ export default {
 </script>
 
 
-<style lang="stylus">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style>
+.showBorder {
+  border: 10px solid red;
 }
 </style>

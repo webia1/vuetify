@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-layout class="showBorder">
     <h1>Content</h1>
     <p>
       <code>let x = 'foo';</code>
@@ -14,5 +14,11 @@
     <p>
       <kbd>Strg + K</kbd>
     </p>
-  </div>
+  </v-layout>
 </template>
+
+<style>
+  .showBorder {
+    border: 1px solid red;
+  }
+</style>
