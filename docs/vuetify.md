@@ -1,5 +1,74 @@
 # Index
 
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Index](#index)
+  - [Tags](#tags)
+  - [Props / Attributes](#props-attributes)
+  - [Grids](#grids)
+    - [Material Design Viewport Breakpoints](#material-design-viewport-breakpoints)
+      - [fullscreen](#fullscreen)
+      - [Visibility](#visibility)
+      - [Display](#display)
+  - [Spacing / Centering](#spacing-centering)
+- [CSS Classes](#css-classes)
+  - [Text-Alignment](#text-alignment)
+  - [Elevation (Hervorhebung mit Schatten)](#elevation-hervorhebung-mit-schatten)
+- [Sandbox](#sandbox)
+- [Colors](#colors)
+- [Scrolling](#scrolling)
+- [Transitions](#transitions)
+- [Theme](#theme)
+  - [Options / Minification / Caching / Stylus Variables](#options-minification-caching-stylus-variables)
+- [Typography](#typography)
+- [Content](#content)
+- [UI Components](#ui-components)
+  - [v-alert](#v-alert)
+  - [v-avatar](#v-avatar)
+  - [v-badge](#v-badge)
+  - [v-bottom-nav*](#v-bottom-nav)
+  - [v-bottom-sheet*](#v-bottom-sheet)
+  - [v-breadcrumb](#v-breadcrumb)
+  - [v-btn](#v-btn)
+  - [Floating Action Button*](#floating-action-button)
+  - [Cards](#cards)
+  - [v-carousel](#v-carousel)
+  - [v-chip](#v-chip)
+  - [v-data-iterator](#v-data-iterator)
+  - [v-data-table*](#v-data-table)
+  - [v-dialog*](#v-dialog)
+  - [v-divider](#v-divider)
+  - [v-expansion-panel](#v-expansion-panel)
+  - [v-footer](#v-footer)
+  - [v-form](#v-form)
+  - [Selects* v-select & Selection controls*](#selects-v-select-selection-controls)
+  - [v-text-field*](#v-text-field)
+  - [v-icon](#v-icon)
+  - [v-list*](#v-list)
+  - [Jumbotron](#jumbotron)
+  - [v-menu](#v-menu)
+  - [v-navigation-drawer*](#v-navigation-drawer)
+  - [v-pagination](#v-pagination)
+  - [v-parallax](#v-parallax)
+  - [v-date-picker, v-time-picker](#v-date-picker-v-time-picker)
+  - [v-progress-circular, v-progress-linear](#v-progress-circular-v-progress-linear)
+  - [v-slider](#v-slider)
+  - [v-snackbar](#v-snackbar)
+  - [v-stepper](#v-stepper)
+  - [v-subheader*](#v-subheader)
+  - [v-tabs*](#v-tabs)
+  - [v-toolbar*](#v-toolbar)
+  - [v-tooltip](#v-tooltip)
+- [v-resize*](#v-resize)
+- [v-ripple](#v-ripple)
+- [v-scroll](#v-scroll)
+
+<!-- /code_chunk_output -->
+
+
 ## Tags
 
 ```jsx
@@ -54,31 +123,51 @@ md    Medium            960 - 1263px
 lg    Desktop           1264 - 1903px
 xl    4K & Ultra-wides  > 1904px
 ```
-
-# CSS Classes
+#### fullscreen
 
 ```jsx
-text-lg-right
-text-md-center
-text-sm-left
-text-xs-center
-text-xs-right
-...
+<v-dialog :fullscreen="$vuetify.breakpoint.xsOnly">
+    ...
+</v-dialog>
 ```
 
-# Visibility
+#### Visibility
 
 ```jsx
 hidden-{xs/sm/md/lg/xl}-{only/and-down/and-up}
 ```
 
-# Display
+#### Display
 
 ```jsx
 d-{inline-flex/flex/inline-block/block/inline}
 ```
 
-# Elevation (Hervorhebung mit Schatten)
+## Spacing / Centering
+
+Padding or margin:
+
+```jsx
+$spacer := 16px
+ {p|m} {t|b|l|r|x|y|a} - {0|1|2|3|4|5} 
+ // 1 = 0.25 * $spacer, 2 (0.5), 3(1), 4 (1.5), 5(3)
+ mt-3 // margin-top: 48px
+ .mx-auto // Centering Block-Elements with a certain width
+```
+
+# CSS Classes
+
+## Text-Alignment
+
+```jsx
+<p class="text-lg-right">Right align on large viewport</p>
+<p class="text-md-center">Center align on medium viewport</p>
+<p class="text-sm-left">Left align on small viewport</p>
+<p class="text-xs-center">Center align on all viewport</p>
+<p class="text-xs-right">Right align on all viewport</p>
+```
+
+## Elevation (Hervorhebung mit Schatten)
 
 ```jsx
 elevation - {0 to 24}
@@ -89,6 +178,9 @@ elevation - {0 to 24}
 [Sandbox Layout](https://vuetifyjs.com/en/examples/layouts/sandbox)
 
 # Colors
+
+Background `class="red"`
+Text `class="red--text"` also `text--{lighten|darken}-{n}`
 
 * base
 * lighten-1 to 5
@@ -130,7 +222,185 @@ elevation - {0 to 24}
 
 [Transitions: see online](https://vuetifyjs.com/en/motion/transitions)
 
+# Theme
+
+```jsx
+// import colors from 'vuetify/es5/util/colors'
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#3f51b5', // or primary: colors.purple.base,
+    secondary: '#b0bec5',
+    accent: '#8c9eff',
+    error: '#b71c1c'
+  }
+})
+```
+## Options / Minification / Caching / Stylus Variables
+> https://vuetifyjs.com/en/style/theme
+
+# Typography
+
+```jsx
+display-{1 to 4}
+.headline
+.title
+.subheading
+.body-2|1
+.caption
+```
+# Content
+
+```jsx
+blockquote 
+p // paragraph 
+code // source code 
+var // variables 
+kbd // user-input, 
+```
+
 # UI Components
 
-## alert
-`v-alert type={success/info/warning/error} :value={true/false}`
+## v-alert
+```jsx
+v-alert 
+  type={success/info/warning/error} 
+  v-model="alert" // v-model or value
+  :value={true/false}
+  dismissible
+  @click="alert = true"
+  icon="new_releases"
+  transition="scale-transition"
+  outline color="success"
+```
+
+## v-avatar
+> https://vuetifyjs.com/en/components/avatars
+
+## v-badge
+> https://vuetifyjs.com/en/components/badges
+
+## v-bottom-nav*
+> https://vuetifyjs.com/en/components/bottom-navigation
+
+## v-bottom-sheet*
+> https://vuetifyjs.com/en/components/bottom-sheets
+
+## v-breadcrumb
+> https://vuetifyjs.com/en/components/breadcrumbs
+
+## v-btn
+> https://vuetifyjs.com/en/components/buttons
+
+## Floating Action Button*
+> https://vuetifyjs.com/en/components/floating-action-buttons
+> ==see also FAB with speed-dial*== 
+
+## Cards
+```jsx
+v-card-media 
+v-card-title 
+v-card-text 
+v-card-actions
+```
+> https://vuetifyjs.com/en/components/cards
+
+## v-carousel
+> https://vuetifyjs.com/en/components/carousels
+
+## v-chip
+Chips come in 4 primary variations. Regular, with icon, with portrait and closeable.
+> https://vuetifyjs.com/en/components/chips
+> Closable: see also `close` option
+
+## v-data-iterator
+The v-data-iterator allows you to customize exactly how to display your data. In this example we are using a grid list with cards. We can use the content-tag prop (along with content-class and content-props) to specify what the wrapper element around the items should look like.
+> https://vuetifyjs.com/en/components/data-iterator
+
+## v-data-table*
+> https://vuetifyjs.com/en/components/data-tables
+
+## v-dialog*
+> https://vuetifyjs.com/en/components/dialogs
+
+## v-divider
+> https://vuetifyjs.com/en/components/dividers
+
+## v-expansion-panel
+> https://vuetifyjs.com/en/components/expansion-panels
+
+## v-footer
+> https://vuetifyjs.com/en/components/footer
+
+## v-form
+> https://vuetifyjs.com/en/components/forms
+
+## Selects* v-select & Selection controls*
+> https://vuetifyjs.com/en/components/selects
+> https://vuetifyjs.com/en/components/selection-controls
+
+## v-text-field*
+> https://vuetifyjs.com/en/components/text-fields
+> see also masks
+
+## v-icon
+> https://vuetifyjs.com/en/components/icons
+
+## v-list*
+> https://vuetifyjs.com/en/components/lists
+> See also: Card image with toolbar and list
+
+## Jumbotron
+> https://vuetifyjs.com/en/components/jumbotrons
+
+## v-menu 
+https://vuetifyjs.com/en/components/menus
+
+## v-navigation-drawer*
+> https://vuetifyjs.com/en/components/navigation-drawers
+
+## v-pagination
+> https://vuetifyjs.com/en/components/paginations
+
+## v-parallax
+> https://vuetifyjs.com/en/components/parallax
+
+## v-date-picker, v-time-picker
+> https://vuetifyjs.com/en/components/date-pickers
+> https://vuetifyjs.com/en/components/time-pickers
+
+## v-progress-circular, v-progress-linear
+> https://vuetifyjs.com/en/components/progress
+
+## v-slider
+> https://vuetifyjs.com/en/components/sliders
+
+## v-snackbar
+> https://vuetifyjs.com/en/components/snackbars
+
+## v-stepper
+> https://vuetifyjs.com/en/components/steppers
+
+## v-subheader*
+> https://vuetifyjs.com/en/components/subheaders
+
+## v-tabs*
+> https://vuetifyjs.com/en/components/tabs 
+
+## v-toolbar*
+`v-toolbar-side-icon`, `v-toolbar-title` and `v-toolbar-items`
+> https://vuetifyjs.com/en/components/toolbars
+> See also: Flexible toolbar and card toolbar
+> Floating with search
+> Dense toolbars
+
+## v-tooltip
+> https://vuetifyjs.com/en/components/tooltips
+
+# v-resize*
+> https://vuetifyjs.com/en/directives/resizing
+
+# v-ripple
+> https://vuetifyjs.com/en/directives/ripples
+
+# v-scroll
+> https://vuetifyjs.com/en/directives/scrolling

@@ -34,6 +34,9 @@
 
 <script>
 export default {
+  mounted () {
+     console.log(this.$el);
+   },
   data: () => ({
     drawer: false,
   }),
