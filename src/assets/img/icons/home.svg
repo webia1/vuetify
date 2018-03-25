@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>map/_facility/home</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.0019888,16.2947614 L20.0019888,11.4947614 L28.0019888,16.2947614 L28.0019888,29.9961903 L23.0019888,29.9961903 L23.0019888,22.9961903 L17.0019888,22.9961903 L17.0019888,29.9961903 L12.0019888,29.9961903 L12.0019888,16.2947614 Z M30.344986,15.368179 L20.0019888,9.16238068 L9.65899163,15.368179 L8.63000011,13.6531931 L20.0019888,6.82999992 L31.3739775,13.6531931 L30.344986,15.368179 Z M15.0256251,16.7787498 L15.0256251,20.3318748 L18.57875,20.3318748 L18.57875,16.7787498 L15.0256251,16.7787498 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map/_facility/home">
+            <rect id="base" fill="#5E6BF2" x="1" y="1" width="38" height="38" rx="8"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Combined-Shape"></g>
+            <g id="_primary/white" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="nonzero">
+                <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
